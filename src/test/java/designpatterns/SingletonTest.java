@@ -1,6 +1,7 @@
 package designpatterns;
 
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
@@ -24,6 +25,6 @@ public final class SingletonTest {
     void secondInvocation() {
         Singleton first = Singleton.instance();
         Singleton second = Singleton.instance();
-        assertNotEquals(first, second);
+        assertEquals(first, second);
     }
 }
