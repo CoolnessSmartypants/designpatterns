@@ -10,10 +10,20 @@ import org.junit.jupiter.api.Test;
 public final class SingletonTest {
 
     /**
-     * Simple instantiation.
+     * Single instantiation.
      */
     @Test
-    void singletonTest() {
+    void firstInvocation() {
         assertNotEquals(null, designpatterns.Singleton.instance());
+    }
+
+    /**
+     * Instantiates twice.
+     */
+    @Test
+    void secondInvocation() {
+        Singleton first = Singleton.instance();
+        Singleton second = Singleton.instance();
+        assertNotEquals(first, second);
     }
 }
